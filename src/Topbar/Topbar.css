@@ -1,0 +1,11 @@
+.topbar--top{
+    width: 100%;
+    background-color:#F55A5A;
+    text-align: center;
+    color: white;
+}
+
+.topbar--label{
+    font-size: 30px;
+    
+}

@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Topbar from './Topbar/Topbar';
+import Card from './Card/Card';
+import database from "./database"
 
 function App() {
+  const carta = database.map( element =>{
+    return <Card 
+    key = {element.key}
+    {...element}
+    ></Card>
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Topbar></Topbar>
+      {carta}
     </div>
   );
 }
